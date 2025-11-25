@@ -1,1 +1,14 @@
+function countCategories(categories) {
+  // Use reduce to build an object with counts
+  const counts = categories.reduce(function (acc, cat) {
+    if (acc[cat] === undefined) {
+      acc[cat] = 1;
+    } else {
+      acc[cat]++;
+    }
+    return acc;
+  }, {});
+
+  return counts;
+}
 
