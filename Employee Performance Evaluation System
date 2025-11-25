@@ -1,1 +1,19 @@
+function processProducts(products) {
+  // 1. Create a new array of product names
+  const productNames = products.map(function (item) {
+    return item.name;
+  });
+
+  // 2. Log each name with message based on price
+  products.forEach(function (item) {
+    if (item.price > 50) {
+      console.log(item.name + " is above $50");
+    } else {
+      console.log(item.name + " is below $50");
+    }
+  });
+
+  // 3. Return the array of names
+  return productNames;
+}
 
